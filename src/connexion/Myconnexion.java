@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Connection;
 /**
- * Created by MBI on 10/02/2019.
+ * Created by JIHED on 10/02/2019.
  */
 public class Myconnexion {
     Connection con;
