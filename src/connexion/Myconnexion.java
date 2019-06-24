@@ -15,18 +15,9 @@ public class Myconnexion {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion2", "root", "pass123");
-        //here mabase is the database name;
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/base", "root", "yourpassword");
+        //here base is the database name;
         //root is the default username;
-        //and pass123 is the password;
-
-
-          /*  Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from article");
-            while (rs.next())
-                System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3) + " em " + rs.getString(4));
-            //con.close();
-            return con;*/
         } catch (Exception e) {
             System.out.println(e);
         }
