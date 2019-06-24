@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="399.0" style="-fx-background-color: #2c344b;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="150.0" layoutY="14.0" text="MyGVA" textFill="#8c90b3">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Circle fill="#fa4771" layoutX="16.0" layoutY="24.0" onMouseClicked="#exit" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
+        <Circle fill="#ffc965" layoutX="30.0" layoutY="24.0" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
+        <Circle fill="#42cf9b" layoutX="45.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
+    </children>
+    <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="62.0" prefHeight="342.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.112">
+        <Label layoutX="16.0" layoutY="20.0" prefHeight="24.0" prefWidth="73.0" style="-fx-background-color: #2e354f;" text="Client" textFill="#42cf9b" />
+        <Label layoutX="15.0" layoutY="90.0" prefHeight="24.0" prefWidth="73.0" style="-fx-background-color: #2e354f;" text="Date Facture " textFill="#42cf9b" />
+        <DatePicker fx:id="dF" layoutX="14.0" layoutY="119.0" prefHeight="31.0" prefWidth="158.0" style="-fx-background-color: #2e354f;" />
+        <ComboBox fx:id="cF" layoutX="16.0" layoutY="54.0" prefHeight="31.0" prefWidth="158.0" />
+       <Button fx:id="btn" layoutX="276.0" layoutY="123.0" mnemonicParsing="false" onAction="#back" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: #42cf9b; -fx-font-family: Poiret One;" text="Back" textFill="WHITE" />
+      <Label fx:id="l" layoutX="74.0" layoutY="207.0" prefHeight="61.0" prefWidth="228.0" textFill="#42cf9b" />
+      <Button fx:id="show" layoutX="280.0" layoutY="55.0" mnemonicParsing="false" onAction="#afficherFacture_Client" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: #42cf9b; -fx-font-family: Poiret One;" text="show" textFill="WHITE" />
+        <TableView fx:id="table_Facture" layoutX="18.0" layoutY="174.0" prefHeight="216.0" prefWidth="318.0">
+            <columns>
+                <TableColumn fx:id="NF_column" prefWidth="65.0" text="N° Facture" />
+                <TableColumn fx:id="NC_column" prefWidth="71.0" text="N° Client" />
+                <TableColumn fx:id="ttc_column" prefWidth="98.0" text="TTC" />
+                <TableColumn fx:id="Date_column" prefWidth="92.0" text="Date" />
+            </columns>
+        </TableView>
+
+    </AnchorPane>
+</AnchorPane>

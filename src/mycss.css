@@ -1,0 +1,216 @@
+.menu-bar {
+    -fx-background-color: transparent;
+}
+.menu {
+    -fx-label-padding: 3px;
+}
+.menu .label, .menu-item .label {
+    -fx-text-fill: #eee;
+    -fx-font-weight : bold;
+}
+.menu:hover, .menu:focused, .menu:pressed {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-item:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+.context-menu {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+.table-view{
+   -fx-background-color: #2e354f;
+   -fx-table-cell-border-color: white;
+}
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
+}
+.date-picker .text-field{
+/*-fx-control-inner-background: #2e354f;*/}
+
+.check-box .box{
+-fx-background-color: #2e354f;-fx-border-radius: 2;
+-fx-border-width: 0.3;
+-fx-border-color: white;
+}
+.check-box :selected . mark{
+-fx-background-color: #2e354f;
+}
+.check-box:selected .box{
+-fx-background-color: #42cf9b;
+}
+.table-view .column-header{
+     -fx-background-color: transparent;
+     -fx-border-color:transparent white transparent transparent;
+     -fx-border-width:0.1;
+     -fx-padding : 10 2 2 2;
+    /* -fx-text-fill : -fx-selection-bar-text;*/
+}
+
+.table-view .column-header-background{
+    /*-fx-background-color: linear-gradient(#131313 0.0%, #424141 100.0%);*/
+    -fx-background-color: #42cf9b;
+    -fx-text-fill : purple;
+     -fx-padding : 3 2 2 2;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+
+/* .table-row-cell */
+
+.table-row-cell:disabled{
+    -fx-opacity:0.5;
+    -fx-background-color:darkgray;
+}
+
+.table-row-cell:disabled .text{
+    /*-fx-strikethrough:  true ;*/
+}
+
+.table-row-cell .text{
+    -fx-font-weight:bold;
+    -fx-fill: white ;
+}
+
+/*.table-row-cell:focused .text {
+     -fx-fill: white ;
+} */
+
+.table-row-cell:hover .text , .table-row-cell:selected .text{
+     -fx-fill: white ;
+}
+
+.table-row-cell:hover:selected .text,.table-row-cell:focused:selected .text{
+   /* -fx-fill:rgb(173.0,255.0,10.0);*/
+   -fx-fill : #2e354f;
+}
+
+
+/*.table-row-cell:focused{
+    -fx-background-color:firebrick;
+}*/
+
+.table-row-cell:focused:disabled{
+    -fx-background-color:darkgray;
+}
+
+
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-row-cell:hover , .table-row-cell:selected{
+    /*-fx-background-color:rgb(0.0,191.0,255.0);*/
+     -fx-background-color:#42cf9b;
+}
+.table-row-cell{
+    -fx-table-cell-border-color: transparent;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #2c344b;
+    -fx-text-fill: white;
+    -fx-border-style : none;
+}
+.date-picker .text-field{
+-fx-background-color: #2c344b;
+-fx-text-fill : white;
+}
+.date-picker .arrow-button{
+-fx-background-color: #2c344b; }
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #42cf9b;
+}
+.date-picker  .cell:hover{
+-fx-background-color: #42cf9b;
+}
+
+.combo-box-base{
+-fx-background-color : #2c344b;
+-fx-effect: dropshadow(three-pass-box ,rgba(0,0,0,0.6),8,0.0,0,0);
+-fx-text-fill : white;
+
+}
+.combo-box .list-cell {
+-fx-text-fill : white;
+}
+
+
+.table-row-cell{
+    /*-fx-background-color: #202020;*/
+    -fx-background-color: #2e354f;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+/*  */

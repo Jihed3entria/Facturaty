@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="588.0" style="-fx-background-color: #2c344b; -fx-text-fill: #000000;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <children>
+
+        <Label layoutX="250.0" layoutY="14.0" text="Facturaty" textFill="#8c90b3">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Circle fill="#fa4771" layoutX="530.0" layoutY="24.0" onMouseClicked="#exit" radius="5.0" stroke="#fa4771" strokeType="INSIDE" />
+        <Circle fill="#ffc965" layoutX="545.0" layoutY="24.0" onMouseClicked="#logout" radius="5.0" stroke="#ffc965" strokeType="INSIDE" />
+        <Circle fill="#42cf9b" layoutX="560.0" layoutY="24.0" radius="5.0" stroke="#42cf9b" strokeType="INSIDE" />
+    </children>
+    <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="50.0" prefHeight="401.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/8.0.112">
+    <MenuBar fx:id="myMenuBar" layoutX="3.0" layoutY="-10.0" prefHeight="31.0" prefWidth="222.0" style="-fx-background-color: #2e354f; -fx-border-shadow: 0,2,2,2; -fx-effect: dropshadow(three-pass-box ,rgba(0,0,0,0.6),8,0.0,0,0); -fx-text-fill: #000000;" styleClass="menu-bar">
+     <menus>
+         <Menu mnemonicParsing="false" text="Article">
+             <items>
+                 <MenuItem mnemonicParsing="false" onAction="#addAr" text="Add" />
+             </items>
+         </Menu>
+         <Menu mnemonicParsing="false" styleClass="menu" text="Client">
+         <items>
+           <MenuItem fx:id="myItem" onAction="#add" styleClass="menu-item" text="Add" />
+             <MenuItem fx:id="myItem2" onAction="#goto_client_montant_sup" styleClass="menu-item" text="Montant" />
+
+         </items>
+       </Menu>
+         <Menu mnemonicParsing="false" text="Facture">
+         <items>
+           <MenuItem mnemonicParsing="false" onAction="#addF" text="Add" />
+             <MenuItem mnemonicParsing="false" onAction="#gotofiltrer" text="Filtrer" />
+             <MenuItem mnemonicParsing="false" onAction="#gotomontant" text="Montant" />
+         </items>
+       </Menu>
+     </menus>
+      <effect>
+         <Shadow />
+      </effect>
+   </MenuBar>
+    <TableView fx:id="tableA" layoutX="12.0" layoutY="90.0" prefHeight="311.0" prefWidth="526.0">
+        <columns>
+            <TableColumn fx:id="X1A" prefWidth="124.0" text="Column X" />
+            <TableColumn fx:id="X2A" prefWidth="130.0" text="Column X" />
+            <TableColumn fx:id="X3A" prefWidth="127.0" text="Column X" />
+            <TableColumn fx:id="X4A" prefWidth="144.0" text="Column X" />
+        </columns>
+    </TableView>
+    <Button fx:id="delete" layoutX="497.0" layoutY="48.0" mnemonicParsing="false" onAction="#DeleteClient" prefHeight="41.0" prefWidth="40.0" style="-fx-background-color: #2c344b; -fx-font-weight: bold; -fx-text-fill: red;" textAlignment="RIGHT" textFill="#42cf9b" textOverrun="WORD_ELLIPSIS">
+        <effect>
+            <DropShadow />
+        </effect>
+    </Button>
+        <TextField fx:id="search" layoutX="228.0" layoutY="-9.0" onKeyTyped="#searchCl" prefHeight="31.0" prefWidth="193.0" style="-fx-background-color: #2c344b; -fx-text-inner-color: white; -fx-border-shadow: 0,2,2,2; -fx-effect: dropshadow(three-pass-box ,rgba(0,0,0,0.6),8,0.0,0,0);">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+     <MenuButton fx:id="choose" layoutX="424.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="48.0" style="-fx-text-fill: white; -fx-background-color: #2c344b;-fx-effect: dropshadow(three-pass-box ,rgba(0,0,0,0.6),8,0.0,0,0);" styleClass="menu">
+         <items>
+                 <MenuItem mnemonicParsing="false" onAction="#getClients" text="Client" />
+                 <MenuItem mnemonicParsing="false" onAction="#getAll_Article" text="Article" />
+                 <MenuItem mnemonicParsing="false" onAction="#gotofactdetail" text="Facture" />
+
+         </items>
+     </MenuButton>
+
+   <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="395.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../img/search.png" />
+      </image>
+   </ImageView>
+        <ImageView fx:id="del_im" onMouseClicked="#DeleteClient"   accessibleRole="BUTTON" fitHeight="42.0" fitWidth="40.0" layoutX="501.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/delete.png" />
+            </image>
+        </ImageView>
+
+            <TableView fx:id="table" layoutX="4.0" layoutY="90.0" prefHeight="311.0" prefWidth="536.0" >
+                     <columns>
+                       <TableColumn fx:id="X1" prefWidth="120.0" text="Column X" />
+                         <TableColumn fx:id="X2" prefWidth="130.0" text="Column X" />
+                         <TableColumn fx:id="X3" prefWidth="140.0" text="Column X" />
+                            <TableColumn fx:id="X4" prefWidth="145.0" text="Mat-Fiscal " />
+                         <TableColumn fx:id="X5" prefWidth="145.0"/>
+
+                     </columns>
+            </TableView>
+
+</AnchorPane>
+
+    <Separator layoutX="20.0" layoutY="33.0" prefHeight="4.0" prefWidth="476.0">
+      <effect>
+         <Shadow />
+      </effect></Separator>
+</AnchorPane>
