@@ -9,7 +9,7 @@ Simple application de Gestion des Factures de vente
 
 ![](screenshots/login.JPG)        ![](screenshots/add.JPG)     ![](screenshots/home.JPG) 
 
-![](screenshots/addFa.JPG)
+![](screenshots/addfa.JPG)
 
 ![](screenshots/facture.JPG)
 
